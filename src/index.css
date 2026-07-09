@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { @apply bg-gray-50 text-gray-900 antialiased; }
+  ::-webkit-scrollbar { width:4px; height:4px; }
+  ::-webkit-scrollbar-track { background:transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
+}
+@layer components {
+  .sidebar-item { @apply flex items-center gap-2.5 px-2.5 py-2 rounded-lg cursor-pointer transition-colors duration-100 text-sm; }
+  .card { @apply bg-white rounded-xl border border-gray-200 p-4; }
+  .btn-gold { @apply flex items-center gap-1.5 font-medium text-sm px-3.5 py-2 rounded-lg cursor-pointer border-0; background:#C8A84B; color:#081724; }
+  .btn-gold:hover { opacity:.9; }
+  .btn-ghost { @apply flex items-center gap-1.5 bg-transparent text-gray-600 text-sm px-3 py-2 rounded-lg cursor-pointer border border-gray-200 hover:bg-gray-50 transition-colors; }
+  .btn-success { @apply flex items-center gap-1.5 text-white text-sm font-medium px-3.5 py-2 rounded-lg cursor-pointer border-0; background:#1D9E75; }
+  .btn-danger  { @apply flex items-center gap-1.5 text-white text-sm font-medium px-3.5 py-2 rounded-lg cursor-pointer border-0; background:#A32D2D; }
+}
